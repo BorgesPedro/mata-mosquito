@@ -1,6 +1,7 @@
 let altura = 0;
 let comprimento = 0;
 let vidas = 1;
+let tempo = 15;
 
 function ajustaPalcoJogo() {
     altura = window.innerHeight
@@ -9,6 +10,11 @@ function ajustaPalcoJogo() {
 }
 
 ajustaPalcoJogo()
+
+let cronometro = setInterval(() => {
+    tempo -= 1
+    document.getElementById('cronometro').innerHTML = tempo
+}, 1000)
 
 function posicaoRandom() {
     if(document.getElementById('mosquito')) {
